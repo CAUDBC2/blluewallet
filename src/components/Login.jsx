@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import Icon from './Icon'
-import { useWallet } from '../context/WalletContext'
+import { useWallet, DEMO_USER, DEMO_PASS } from '../context/WalletContext'
 
 export default function Login() {
   const { login } = useWallet()
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
+  const [username, setUsername] = useState(DEMO_USER)
+  const [password, setPassword] = useState(DEMO_PASS)
   const [error, setError] = useState('')
 
   function handleSubmit(e) {
@@ -56,13 +56,6 @@ export default function Login() {
           Entrar
         </button>
       </form>
-
-      <p className="text-xs text-white/30 mt-10 text-center max-w-sm">
-        BllueWallet — protótipo acadêmico, dados fictícios, sem integração real com blockchain.
-        <br />
-        Use usuário <span className="text-white/50">demo</span> e senha{' '}
-        <span className="text-white/50">123456</span>.
-      </p>
     </div>
   )
 }

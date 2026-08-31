@@ -2,8 +2,8 @@ import { createContext, useContext, useState } from 'react'
 
 const WalletContext = createContext(null)
 
-const DEMO_USER = 'demo'
-const DEMO_PASS = '123456'
+export const DEMO_USER = '5028471963'
+export const DEMO_PASS = '08172119'
 const INITIAL_BALANCE = 0.8776
 
 export function WalletProvider({ children }) {

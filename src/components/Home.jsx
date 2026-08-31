@@ -39,10 +39,6 @@ export default function Home({ price, priceError }) {
           {usdValue !== null ? `≈ ${formatUsd(usdValue)}` : 'Calculando...'}
         </p>
       </div>
-
-      <p className="text-center text-[11px] text-white/25 mt-2">
-        BllueWallet — protótipo demonstrativo, sem valor real.
-      </p>
     </div>
   )
 }
