@@ -32,7 +32,7 @@ export default function Home({ price, priceError }) {
 
       <div className="rounded-2xl bg-gradient-to-br from-[#161B26] to-[#0F1420] border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.4)] p-6">
         <p className="text-xs text-white/40 uppercase tracking-wider mb-2">Saldo disponível</p>
-        <p className="text-4xl font-extrabold text-[#F7931A] tracking-tight">
+        <p className="text-4xl font-extrabold text-[#3D76D8] tracking-tight">
           {btcBalance.toFixed(4)} <span className="text-lg font-semibold">BTC</span>
         </p>
         <p className="text-white/50 text-sm mt-2">

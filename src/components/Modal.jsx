@@ -15,7 +15,7 @@ export default function Modal({ open, onClose, title, message }) {
           <X size={18} />
         </button>
         <div className="flex flex-col items-center text-center gap-3 pt-2">
-          <CheckCircle2 size={48} className="text-[#F7931A]" />
+          <CheckCircle2 size={48} className="text-[#3D76D8]" />
           <h2 className="text-lg font-bold">{title}</h2>
           <p className="text-sm text-white/50">{message}</p>
           <button
