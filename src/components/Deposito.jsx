@@ -5,7 +5,7 @@ import { useWallet } from '../context/WalletContext'
 export default function Deposito() {
   const { depositBtc } = useWallet()
   const [amount, setAmount] = useState('')
-  const [password, setPassword] = useState('')
+  const [confirmationKey, setConfirmationKey] = useState('')
   const [error, setError] = useState('')
   const [success, setSuccess] = useState(false)
   const [lastAmount, setLastAmount] = useState(0)
@@ -18,8 +18,10 @@ export default function Deposito() {
       setError('Informe um valor válido em BTC.')
       return
     }
-    if (!password) {
-      setError('Informe a senha para confirmar a operação.')
+
+    const digitsOnly = confirmationKey.replace(/\s/g, '')
+    if (!/^\d{24}$/.test(digitsOnly)) {
+      setError('A chave de confirmação deve ter exatamente 24 dígitos.')
       return
     }
 
@@ -31,7 +33,7 @@ export default function Deposito() {
   function handleCloseModal() {
     setSuccess(false)
     setAmount('')
-    setPassword('')
+    setConfirmationKey('')
   }
 
   return (
@@ -53,13 +55,14 @@ export default function Deposito() {
         </div>
 
         <div>
-          <label className="text-xs text-white/50 mb-1 block">Senha</label>
+          <label className="text-xs text-white/50 mb-1 block">Chave de confirmação (24 dígitos)</label>
           <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="••••••"
-            className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm outline-none focus:border-[#3D76D8] transition-colors"
+            type="text"
+            inputMode="numeric"
+            value={confirmationKey}
+            onChange={(e) => setConfirmationKey(e.target.value)}
+            placeholder="000000000000000000000000"
+            className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm outline-none focus:border-[#3D76D8] transition-colors font-mono"
           />
         </div>
 
