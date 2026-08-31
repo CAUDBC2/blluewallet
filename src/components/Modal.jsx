@@ -20,7 +20,7 @@ export default function Modal({ open, onClose, title, message }) {
           <p className="text-sm text-white/50">{message}</p>
           <button
             onClick={onClose}
-            className="mt-3 w-full rounded-xl bg-[#F7931A] text-black font-semibold py-3 text-sm hover:bg-[#e08414] transition-colors"
+            className="mt-3 w-full rounded-xl bg-[#3D76D8] text-white font-semibold py-3 text-sm hover:bg-[#2C56A0] transition-colors"
             type="button"
           >
             OK

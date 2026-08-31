@@ -22,7 +22,7 @@ export default function CopyField({ label, value }) {
       </div>
       <button
         onClick={handleCopy}
-        className="flex items-center gap-1 text-xs font-medium text-[#F7931A] shrink-0 ml-3"
+        className="flex items-center gap-1 text-xs font-medium text-[#3D76D8] shrink-0 ml-3"
         type="button"
       >
         {copied ? <Check size={16} /> : <Copy size={16} />}

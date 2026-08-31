@@ -31,7 +31,7 @@ export default function Login() {
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm outline-none focus:border-[#F7931A] transition-colors"
+            className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm outline-none focus:border-[#3D76D8] transition-colors"
             autoComplete="username"
           />
         </div>
@@ -42,7 +42,7 @@ export default function Login() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="••••••"
-            className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm outline-none focus:border-[#F7931A] transition-colors"
+            className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm outline-none focus:border-[#3D76D8] transition-colors"
             autoComplete="current-password"
           />
         </div>
@@ -51,7 +51,7 @@ export default function Login() {
 
         <button
           type="submit"
-          className="mt-2 rounded-xl bg-[#F7931A] text-black font-semibold py-3 text-sm hover:bg-[#e08414] transition-colors"
+          className="mt-2 rounded-xl bg-[#3D76D8] text-white font-semibold py-3 text-sm hover:bg-[#2C56A0] transition-colors"
         >
           Entrar
         </button>

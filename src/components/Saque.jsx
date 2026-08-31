@@ -63,7 +63,7 @@ export default function Saque() {
                   type="button"
                   onClick={() => setUnit(u)}
                   className={`px-3 py-1 text-xs font-medium transition-colors ${
-                    unit === u ? 'bg-[#F7931A] text-black' : 'text-white/50'
+                    unit === u ? 'bg-[#3D76D8] text-white' : 'text-white/50'
                   }`}
                 >
                   {u}
@@ -78,7 +78,7 @@ export default function Saque() {
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             placeholder={unit === 'USD' ? '0.00' : '0.0000'}
-            className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm outline-none focus:border-[#F7931A] transition-colors"
+            className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm outline-none focus:border-[#3D76D8] transition-colors"
           />
         </div>
 
@@ -90,7 +90,7 @@ export default function Saque() {
             value={confirmationKey}
             onChange={(e) => setConfirmationKey(e.target.value)}
             placeholder="000000000000000000000000"
-            className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm outline-none focus:border-[#F7931A] transition-colors font-mono"
+            className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm outline-none focus:border-[#3D76D8] transition-colors font-mono"
           />
         </div>
 
@@ -98,7 +98,7 @@ export default function Saque() {
 
         <button
           type="submit"
-          className="mt-2 rounded-xl bg-[#F7931A] text-black font-semibold py-3 text-sm hover:bg-[#e08414] transition-colors"
+          className="mt-2 rounded-xl bg-[#3D76D8] text-white font-semibold py-3 text-sm hover:bg-[#2C56A0] transition-colors"
         >
           Confirmar saque
         </button>

@@ -17,7 +17,7 @@ export default function NavBar({ current, onChange }) {
             type="button"
             onClick={() => onChange(id)}
             className={`flex flex-col items-center gap-1 px-4 py-1.5 rounded-lg transition-colors ${
-              active ? 'text-[#F7931A]' : 'text-white/40'
+              active ? 'text-[#3D76D8]' : 'text-white/40'
             }`}
           >
             <Icon size={22} strokeWidth={active ? 2.4 : 2} />
